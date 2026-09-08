@@ -1,0 +1,133 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="1BcD9Jxvfjlj7SZNkXHJ">
+    <mxGraphModel dx="1425" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#232F3E;" value="Arquitetura de Streaming — Amazon Connect para Área de Negócios" vertex="1">
+          <mxGeometry height="40" width="960" x="100" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="L1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;rotation=-90;" value="ORIGEM" vertex="1">
+          <mxGeometry height="20" width="60" x="60" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="B1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#378ADD;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="100" width="960" x="100" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.connect;" value="Amazon Connect&#xa;Contact center gerenciado&#xa;voz · chat · tarefas" vertex="1">
+          <mxGeometry height="60" width="60" x="140" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" value="Eventos de Contato&#xa;início · fim · transferência · abandono" vertex="1">
+          <mxGeometry height="50" width="220" x="360" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" value="CTR Records&#xa;Contact Trace Records (JSON)" vertex="1">
+          <mxGeometry height="50" width="220" x="740" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;" target="4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;" target="5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;rotation=-90;" value="STREAMING" vertex="1">
+          <mxGeometry height="20" width="80" x="60" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="B2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1D9E75;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="110" width="960" x="100" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.kinesis;" value="Kinesis Data Streams&#xa;ingestão em tempo real&#xa;retenção 7 dias" vertex="1">
+          <mxGeometry height="60" width="60" x="140" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" value="AWS Lambda&#xa;enriquecimento e validação&#xa;Python · trigger por stream" vertex="1">
+          <mxGeometry height="60" width="60" x="440" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.kinesis_firehose;" value="Kinesis Firehose&#xa;entrega ao S3&#xa;buffer 60s · Parquet" vertex="1">
+          <mxGeometry height="60" width="60" x="780" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;" target="7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;" target="8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;rotation=-90;" value="STORAGE" vertex="1">
+          <mxGeometry height="20" width="60" x="60" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="B3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#D86C11;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="110" width="960" x="100" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#3F8624;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" value="S3 — Bronze&#xa;dados brutos (JSON)&#xa;partição: ano/mês/dia" vertex="1">
+          <mxGeometry height="60" width="60" x="140" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#3F8624;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" value="S3 — Silver&#xa;dados tratados (Parquet)&#xa;deduplicado · tipado" vertex="1">
+          <mxGeometry height="60" width="60" x="440" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#3F8624;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" value="S3 — Gold&#xa;agregados e métricas&#xa;prontos para dashboard" vertex="1">
+          <mxGeometry height="60" width="60" x="780" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;" target="9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;" target="10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" edge="1" parent="1" source="10" style="edgeStyle=orthogonalEdgeStyle;" target="11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;rotation=-90;" value="CATÁLOGO" vertex="1">
+          <mxGeometry height="20" width="70" x="60" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="B4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#7F77DD;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="110" width="960" x="100" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;" value="AWS Glue Crawler&#xa;cataloga schemas&#xa;agenda: a cada 1h" vertex="1">
+          <mxGeometry height="60" width="60" x="140" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;" value="Glue Data Catalog&#xa;metadados centralizados&#xa;tabelas · partições" vertex="1">
+          <mxGeometry height="60" width="60" x="440" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.athena;" value="Amazon Athena&#xa;queries SQL sobre S3&#xa;serverless · paga por query" vertex="1">
+          <mxGeometry height="60" width="60" x="780" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="a9" edge="1" parent="1" source="11" style="edgeStyle=orthogonalEdgeStyle;" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a10" edge="1" parent="1" source="12" style="edgeStyle=orthogonalEdgeStyle;" target="13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a11" edge="1" parent="1" source="13" style="edgeStyle=orthogonalEdgeStyle;" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;rotation=-90;" value="CONSUMO" vertex="1">
+          <mxGeometry height="20" width="60" x="60" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="B5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#D85A30;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="110" width="960" x="100" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;" value="Power BI / QuickSight&#xa;dashboard em tempo real&#xa;KPIs · TMA · SLA · fila" vertex="1">
+          <mxGeometry height="60" width="180" x="120" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sns;" value="Amazon SNS&#xa;alertas automáticos&#xa;SLA violado · fila crítica" vertex="1">
+          <mxGeometry height="60" width="60" x="500" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;" value="API Gateway + App&#xa;consultas ad-hoc&#xa;time de negócio" vertex="1">
+          <mxGeometry height="60" width="60" x="820" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="a12" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;" target="15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a13" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;" target="16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a14" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;" target="17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a15" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#D85A30;fontColor=#D85A30;fontSize=9;" target="16" value="alerta direto">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
