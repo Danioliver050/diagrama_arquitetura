@@ -1,4 +1,4 @@
-# Arquitetura de Streaming — Amazon Connect para Área de Negócios
+# Diagrama de Arquitetura— Amazon Connect para Área de Negócios
 
 Diagrama de arquitetura de dados em tempo real que mostra como eventos de um contact center bancário são capturados, processados e entregues como KPIs operacionais para a área de negócios — com latência de menos de 60 segundos.
 
