@@ -4,13 +4,13 @@ Diagrama de arquitetura de dados em tempo real que mostra como eventos de um con
 
 ---
 
-## O diagrama
+## Diagrama
 
 ![Arquitetura de Streaming](diagrams/architecture-main.png)
 
 ---
 
-## O problema que este projeto resolve
+## Qual problema mirei resolver?
 
 Contact centers bancários e de fintechs geram milhares de eventos por hora: chamadas iniciadas, abandonadas, transferidas, finalizadas. Sem uma arquitetura de dados adequada, gestores só conseguem visualizar métricas do dia anterior — tarde demais para agir em picos de volume, SLAs violados ou filas críticas.
 
@@ -18,7 +18,7 @@ Esta arquitetura transforma eventos brutos do contact center em insights dispon�
 
 ---
 
-## As 5 camadas da arquitetura
+## As camadas da arquitetura
 
 **1. Origem — Amazon Connect**
 Contact center gerenciado pela AWS. Emite eventos de contato em tempo real: início de chamada, fim, transferência e abandono. Suporta voz, chat e tarefas em um único serviço.
@@ -40,9 +40,9 @@ Power BI ou QuickSight conectam no Athena e exibem os KPIs atualizados em tempo 
 
 ---
 
-## Por que cada serviço foi escolhido
+## Os serviços que escolhi e as razões
 
-| Decisão | Alternativa considerada | Por que esta escolha |
+| Duvida | Escolha  | Motivo |
 |---|---|---|
 | Kinesis vs SQS | SQS | Kinesis suporta múltiplos consumidores simultâneos e retém dados por 7 dias para replay |
 | Parquet vs CSV | CSV | 63% menor em tamanho, queries até 9x mais rápidas, tipos de dados preservados |
@@ -93,7 +93,7 @@ aws-connect-streaming/
 ## Autor
 
 **Daniel Machado**
-Analista de Dados | SQL · Python · Power BI · AWS | Mercado Financeiro
+Analista de Dados | SQL · Python · Power BI · AWS 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-danielmachado-blue)](https://linkedin.com/in/daniel-o-machado)
 [![GitHub](https://img.shields.io/badge/GitHub-Danioliver050-gray)](https://github.com/Danioliver050)
