@@ -6,7 +6,7 @@ Diagrama de arquitetura de dados em tempo real que mostra como eventos de um con
 
 ## Diagrama
 
-![Arquitetura de Streaming](diagrams/architecture-main.png)
+![Arquitetura de Streaming](diagrams/architecture_main.png)
 
 ---
 
